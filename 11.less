@@ -1,0 +1,51 @@
+@import "CSS/demo";
+
+@fen: 20;
+@border: 750px;
+@font: (@border / @fen);
+html {
+  font-size: (@border / @fen);
+}
+
+body {
+  min-width: 320px;
+  //body的元素大小=宽度，因此根据公式body的rem=份数
+  width: 15rem;
+  margin: 0 auto;
+  //父元素设置line-height:1.5会直接继承给子元素，子元素根据自己的font-size再去计算子元素自己的line-height。
+  //父元素设置line-height:150%是计算好了line-height值，然后把这个计算值给子元素继承，子元素继承拿到的就是最终的值了。此时子元素设置font-size就对其line-height无影响了。
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+
+.search-content {
+  position: fixed;
+  top: 0;
+  //可以直接写，因为最后是跟着html的font-size大小变的，这里全部按照设计稿的宽度运算。
+  width: 12px;
+  height: (78rem / 50);
+}
+
+.search {
+  flex: 1;
+
+  input {
+    //去掉蓝色边框
+    outline: none;
+    width: 100%;
+    height: 1rem;
+    border: 0;
+    border-radius: 33rem / @baseFont;
+    background-color: #FFF2CC;
+    margin-top: 12rem / @baseFont;
+    font-size: 25rem / @baseFont;
+    padding-left: 55rem / @baseFont;
+    color: #757575;
+  }
+}

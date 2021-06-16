@@ -1,0 +1,49 @@
+html {
+  font-size: 50px;
+}
+div {
+  width: 150px;
+  height: 500px;
+  border: 750px solid red;
+  background-color: #444444;
+}
+img {
+  width: 82rem / 50px;
+  height: 82rem / 50px;
+}
+html {
+  font-size: 37.5px;
+}
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+.search-content {
+  position: fixed;
+  top: 0;
+  width: 12px;
+  height: 1.56rem;
+}
+.search {
+  flex: 1;
+}
+.search input {
+  outline: none;
+  width: 100%;
+  height: 1rem;
+  border: 0;
+  border-radius: 33rem / 50px;
+  background-color: #FFF2CC;
+  margin-top: 12rem / 50px;
+  font-size: 25rem / 50px;
+  padding-left: 55rem / 50px;
+  color: #757575;
+}
